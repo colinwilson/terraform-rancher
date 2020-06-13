@@ -12,6 +12,10 @@ resource "rancher2_cluster" "cluster" {
       }
     }
 
+    dns {
+      upstream_nameservers = ["1.1.1.1","9.9.9.9","8.8.8.8"]
+    }
+
     ingress {
       provider = var.ingress_provider
     }
@@ -61,6 +65,7 @@ resource "rancher2_cluster" "cluster" {
       "prometheus.resources.core.requests.memory" = "750Mi"
       "prometheus.retention"                      = "12h"
     }
+    version = "0.1.0"
   }
 }
 

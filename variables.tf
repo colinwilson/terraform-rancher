@@ -7,9 +7,6 @@ variable "etcd_s3_region" {}
 variable "cluster_name" {}
 
 # Optional configuration
-variable "private_network_interface" {
-  default = "ens10"
-}
 variable "etcd_backup_enabled" {
   default = true
 }

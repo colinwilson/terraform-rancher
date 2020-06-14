@@ -7,9 +7,6 @@ resource "rancher2_cluster" "cluster" {
   rke_config {
     network {
       plugin = "canal"
-      canal_network_provider {
-        iface = var.private_network_interface
-      }
     }
 
     dns {

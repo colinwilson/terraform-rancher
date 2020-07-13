@@ -10,7 +10,7 @@ resource "rancher2_cluster" "cluster" {
     }
 
     dns {
-      upstream_nameservers = ["1.1.1.1","8.8.8.8"]
+      upstream_nameservers = ["1.1.1.1","1.0.0.1"]
     }
 
     ingress {

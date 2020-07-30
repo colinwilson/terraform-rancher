@@ -9,6 +9,8 @@ resource "rancher2_cluster" "cluster" {
       plugin = "canal"
     }
 
+    kubernetes_version = var.kube_version
+
     dns {
       upstream_nameservers = ["1.1.1.1","1.0.0.1"]
     }

@@ -7,6 +7,9 @@ variable "etcd_s3_region" {}
 variable "cluster_name" {}
 
 # Optional configuration
+variable "kube_version" {
+  default = ""
+}
 variable "etcd_backup_enabled" {
   default = true
 }
